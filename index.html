@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Project 01</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./styles.css" >
+</head>
+<body>
+    <div id="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Commander Deck Builder</h1>
+            </div>
+        </div>
+        <nav class="nav nav-pills nav-justified">
+            <a class="nav-link active" href="#">Choose Commander</a>
+            <a class="nav-link" href="#">Build Cardpool</a>
+            <a class="nav-link" href="#">Sort Strategies</a>
+            <a class="nav-link" href="#">Sort Usefulness</a>
+            <a class="nav-link" href="#">Cull Cards</a>
+            <a class="nav-link" href="#">Build Manabase</a>
+        </nav>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div id="manaButtons" class="btn-group mr-2" role="group" aria-label="First group">
+                <button id="anyBtn" type="button" class="btn btn-secondary" data-toggle="button">Any</button>
+                <button id="wBtn" type="button" class="btn btn-secondary" data-toggle="button">W</button>
+                <button id="uBtn" type="button" class="btn btn-secondary" data-toggle="button">U</button>
+                <button id="bBtn" type="button" class="btn btn-secondary" data-toggle="button">B</button>
+                <button id="rBtn" type="button" class="btn btn-secondary" data-toggle="button">R</button>
+                <button id="gBtn" type="button" class="btn btn-secondary" data-toggle="button">G</button>
+                <button id="cBtn" type="button" class="btn btn-secondary" data-toggle="button">None</button>
+            </div>
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <button id="textSearchDrop" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Card Name</button>
+                    <div class="dropdown-menu">
+                        <button id="cardNameSelection" class="dropdown-item" type="button">Card Name</a>
+                        <button id="oracleTextSelection" class="dropdown-item" type="button">Oracle Text</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <input id="searchTextInput" type="text" class="form-control dropdown-toggle" data-toggle="dropdown" aria-label="Text input with dropdown button" aria-haspopup="true" aria-expanded="false">
+                    <div id="autoCompleteText" class="dropdown-menu" aria-labelledby="searchTextInput">
+                    </div>
+                </div>
+            </div>
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Price Cap(USD):</span>
+                </div>
+                <input id="priceCapInput" type="text" class="form-control"  placeholder="ex: 1.50" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <div class="dropdown">
+                <button id="creatureTypesDrop" type="button" class="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Creature Type
+                </button>
+                <div id="creatureTypesList" class="dropdown-menu" aria-labelledby="creaturetypesDrop">
+                </div>
+            </div>
+            <div class="dropdown">
+                <button id="cardTypesDrop" type="button" class="btn btn-lg btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Card Type
+                </button>
+                <div id="cardTypeList" class="dropdown-menu" aria-labelledby="cardTypesDrop">
+                </div>
+            </div>
+            <div class="dropdown">
+                <button id="cmcTypesDrop" type="button" class="btn btn-lg btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CMC
+                </button>
+                <div id="cmcTypeList" class="dropdown-menu" aria-labelledby="cmcTypesDrop">
+                </div>
+            </div>
+            <button id="searchBtn" class="btn btn-primary" type="button">Search!</button>
+            <button id="luckyBtn" class="btn btn-primary" type="button">I'm Feeling Lucky!</button>
+        </div>
+        <div id="jsTarget"></div>
+    </div>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="./main.js" ></script>
+</body>
+</html>

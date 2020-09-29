@@ -1,0 +1,22 @@
+#jsTarget {
+    font-size: 24px;
+    font-style: italic;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+.dropdown {
+    margin: 0;
+
+}
+
+.btn-toolbar {
+    justify-content: space-between;
+}
+
+#searchTextInput {
+    margin: 0;
+    height: 100%;
+}
